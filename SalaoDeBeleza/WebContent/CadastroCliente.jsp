@@ -22,11 +22,11 @@
 					type="text" class="form-control" id="telefoneContato"
 					placeholder="Numero" required>
 			</div>
-		</div>
-		<div>
-			<div class="form-group col-md-3">
-				<label for="local">Horario marcado</label> <input type="time"
-					class="form-control" id="horarioMarcado">
+			<div>
+				<div>
+					<label for="local">Horario marcado</label> <input type="time"
+						class="form-control" id="horarioMarcado">
+				</div>
 			</div>
 			<div class="col-md-3 mb-3">
 				<label for="validationDefault04">Tipo de serviço</label> <input
@@ -35,7 +35,7 @@
 			</div>
 			<div class="col-md-3 mb-3">
 				<label for="validationDefault05">Valor</label> <input type="number"
-					class="form-control" id="valor" placeholder="Zip" required>
+					class="form-control" id="valor" placeholder="Valor" required>
 			</div>
 			<div>
 				<select id="situacao" class="form-control">
