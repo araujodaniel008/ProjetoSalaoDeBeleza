@@ -38,6 +38,7 @@
 					class="form-control" id="valor" placeholder="Valor" required>
 			</div>
 			<div>
+		    <label>Situação</label>
 				<select id="situacao" class="form-control">
 					<option selected>Em débito</option>
 					<option>Pago</option>
