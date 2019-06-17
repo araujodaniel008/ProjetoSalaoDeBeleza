@@ -12,3 +12,13 @@ situacao   varchar(5)
 );
 show tables;
 desc painel;
+
+insert into painel(
+	nome_completo,
+	telefone_para_contato,
+	horario_marcado,
+	tipo_de_serviço,
+	valor,
+	situacao,
+	saida_prevista )
+	select * from painel;
