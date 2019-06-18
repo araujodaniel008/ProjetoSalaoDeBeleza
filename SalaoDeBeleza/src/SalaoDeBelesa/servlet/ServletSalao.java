@@ -21,8 +21,26 @@ public class ServletSalao extends HttpServlet {
 		Cliente obj = new Cliente();
 		obj.setNome_completo(nome);
 		obj.setTelefone_para_contato(telefone);
-		
+
 		PrintWriter saida = response.getWriter();
+		
+		boolean sucesso = false;
+		if (cod > 0) {
+			obj.setCod(cod);
+			if (request.getParameter("apagar") == null) {
+				sucesso = obj.atualizar();
+			} else {
+				sucesso = obj.apagar();
+			}
+		} else {
+			sucesso = obj.inserir();
+		}
+
+		if (sucesso) {
+			saida.print("Gravado com sucesso");
+		} else {
+			saida.print("Erro ao gravar");
+		}
 	}
 
 }
