@@ -28,7 +28,7 @@ public class ServletSalao extends HttpServlet {
 		boolean sucesso = false;
 		if (cod > 0) {
 			obj.setCod(cod);
-		//	if (request.getParameter("apagar") == null) {
+			if (request.getParameter("apagar") == null) {
 			//	sucesso = obj.atualizar();
 		//	} else {
 			//	sucesso = obj.apagar();
