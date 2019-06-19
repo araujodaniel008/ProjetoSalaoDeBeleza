@@ -23,15 +23,16 @@ public class ServletSalao extends HttpServlet {
 		obj.setTelefone_para_contato(telefone);
 
 		PrintWriter saida = response.getWriter();
+		int cod = Integer.parseInt(request.getParameter("cod"));
 		
 		boolean sucesso = false;
 		if (cod > 0) {
 			obj.setCod(cod);
-			if (request.getParameter("apagar") == null) {
-				sucesso = obj.atualizar();
-			} else {
-				sucesso = obj.apagar();
-			}
+		//	if (request.getParameter("apagar") == null) {
+			//	sucesso = obj.atualizar();
+		//	} else {
+			//	sucesso = obj.apagar();
+		//	}
 		} else {
 			sucesso = obj.inserir();
 		}
