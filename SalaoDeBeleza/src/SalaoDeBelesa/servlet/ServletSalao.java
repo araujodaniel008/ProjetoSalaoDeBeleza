@@ -14,15 +14,15 @@ import SalaoDeBeleza.cliente.Cliente;
 @WebServlet(name = "ServletSalao", urlPatterns = "/ServletSalao")
 public class ServletSalao extends HttpServlet {
 	public void service(HttpServletRequest request, HttpServletResponse response) throws ServerException, IOException {
-		String nome = request.getParameter("nome");
-		String telefone = request.getParameter("telefone");
-		System.out.println("Nome digitado " + nome + " Status " + telefone);
+		String Nome_completo = request.getParameter("nome");
+		String Telefone_para_contato = request.getParameter("telefone");
+		System.out.println("Nome digitado " + Nome_completo + " Status " + Telefone_para_contato);
 
 		
 		
 		Cliente obj = new Cliente();
-		obj.setNome_completo(nome);
-	//	obj.setTelefone_para_contato(telefone);
+		obj.setNome_completo(Nome_completo);
+		obj.setTelefone_para_contato(Telefone_para_contato);
 
 		PrintWriter saida = response.getWriter();
 		int cod = Integer.parseInt(request.getParameter("cod"));
