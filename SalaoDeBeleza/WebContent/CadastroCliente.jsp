@@ -15,7 +15,7 @@
 	<script type="text/javascript">
 		function dadosForm() {
 			var dados = "";
-			dados += "nomeCompleto="+ document.getElementById("nomeCompleto").value;
+			dados += "nome="+ document.getElementById("nome").value;
 			dados += "&telefoneContato="+ document.getElementById("telefoneContato").value;
 			dados += "&horarioMarcado="+ document.getElementById("horarioMarcado").value;
 			dados += "&tipoServico="+ document.getElementById("tipoServico").value;
@@ -85,12 +85,12 @@
 		<div class="aaaaform-row">
 			<div class="col-md-4 mb-3">
 				<label for="validationDefault01">Nome completo</label> <input
-					type="text" class="form-control" id="nomeCompleto"  value="<% out.print(ServletSalao.getNome_Completo()); %>"
+					type="text" class="form-control" id="nomeCompleto"  value="<% out.print(ServletSalao.getNome_completo()); %>"
 					placeholder="Nome completo" required>
 			</div>
 			<div class="col-md-4 mb-3">
 				<label for="validationDefault02">Telefone para contato</label> <input
-					type="text" class="form-control" id="telefoneContato"
+					type="text" class="form-control" id="telefoneContato"  value="<% out.print(ServletSalao.getTelefone_para_contato()); %>"
 					placeholder="Numero" required>
 			</div>
 			<div>

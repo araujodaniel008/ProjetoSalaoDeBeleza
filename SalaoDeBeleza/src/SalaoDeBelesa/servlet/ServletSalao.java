@@ -18,9 +18,11 @@ public class ServletSalao extends HttpServlet {
 		String telefone = request.getParameter("telefone");
 		System.out.println("Nome digitado " + nome + " Status " + telefone);
 
+		
+		
 		Cliente obj = new Cliente();
 		obj.setNome_completo(nome);
-		obj.setTelefone_para_contato(telefone);
+	//	obj.setTelefone_para_contato(telefone);
 
 		PrintWriter saida = response.getWriter();
 		int cod = Integer.parseInt(request.getParameter("cod"));
