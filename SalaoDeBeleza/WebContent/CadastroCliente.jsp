@@ -88,7 +88,7 @@
 		if (request.getParameter("cod") != null) {
 
 			int cod = Integer.parseInt(request.getParameter("cod"));
-			objCliente = objCliente;
+			objCliente = objCliente.getLista();
 
 		}
 	%>

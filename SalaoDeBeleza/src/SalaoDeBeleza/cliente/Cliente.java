@@ -2,7 +2,13 @@ package SalaoDeBeleza.cliente;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.senai.cntrCirurgico.modelo.ConectarJDBC;
+import org.senai.cntrCirurgico.modelo.Painel;
 
 
 public class Cliente {
@@ -106,5 +112,27 @@ public class Cliente {
 		}
 		return false;
 	}
+	public List<Cliente> getLista() {
 
+		try {
+			Connection conexao = new ConectarCliente().getConectar();
+			PreparedStatement ps = conexao.prepareStatement("select * from painel");
+			ResultSet rs = ps.executeQuery();
+
+			List<Cliente> lsPainel = new ArrayList<Cliente>();
+
+			while (rs.next()) {
+				Cliente p = new Cliente();
+				p.setCod(rs.getInt("cod"));
+				p.setNome_completo(rs.getString("Nome_completo"));
+				p.setTelefone_para_contato(rs.getString("Telefone_para_contato"));
+				lsPainel.add(p);
+			}
+			ps.close();
+			conexao.close();
+			return lsPainel;
+		} catch (Exception e) {
+
+		}
+}
 }
