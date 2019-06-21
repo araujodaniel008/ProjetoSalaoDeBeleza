@@ -7,8 +7,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.senai.cntrCirurgico.modelo.ConectarJDBC;
-import org.senai.cntrCirurgico.modelo.Painel;
+
 
 
 public class Cliente {
@@ -134,5 +133,6 @@ public class Cliente {
 		} catch (Exception e) {
 
 		}
+		return getLista();
 }
 }
